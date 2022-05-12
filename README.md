@@ -15,6 +15,6 @@ sudo mysql -u root -p mysql  -e "UPDATE user SET plugin='mysql_native_password',
 or
 
 ```
-sudo mysql -u root -p mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '<password>';" 
+sudo mysql -u root -p -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '<password>';" 
 ```
 

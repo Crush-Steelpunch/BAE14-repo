@@ -12,3 +12,9 @@ Set Ubuntu 18.04 mysql-server to allow root login using localhost not auth_socke
 sudo mysql -u root -p mysql  -e "UPDATE user SET plugin='mysql_native_password',authentication_string=PASSWORD('password') WHERE user = 'root'; flush privileges;"
 ```
 
+or
+
+```
+sudo mysql -u root -p mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '<password>';" 
+```
+
